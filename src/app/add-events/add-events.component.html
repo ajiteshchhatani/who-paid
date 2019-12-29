@@ -1,0 +1,29 @@
+<form class="mr-auto" [formGroup]="eventForm" (ngSubmit)="submitEventDetails()">
+    <div class="row form-group">
+        <label class="col-sm-3 offset-sm-2" for="event">Event</label>
+        <input type="text" class="col-sm-5 form-control" id="event" formControlName="event">
+
+        <label class="col-sm-3 offset-sm-2" for="participants">Participants</label>
+        <button class="col-sm-2 form-control btn-success" (click)="addParticipants()" type="button">Add
+            Particpants</button>
+        <div class="w-100"></div>
+        <div class="col-sm-12 dynamicParticipantControl" formArrayName="participants"
+            *ngFor="let numberOfParticipants of participants.controls; let i=index">
+            <input type="text" class="offset-sm-5 col-sm-5 form-control" id="particpantName" formControlName="{{i}}">
+        </div>
+        <div class="w-100"></div>
+        <!-- <label class=" col-sm-3" for="participants">Participants</label>
+       <input type="text" class="col-sm-5" id="event" formControlName="event"> -->
+        <label class="col-sm-3 offset-sm-2" for="totalcost">Total Cost</label>
+        <input type="text" class="col-sm-5 form-control" id="totalcost" formControlName="totalcost">
+
+        <label class="col-sm-3 offset-sm-2" for="paidby">Paid By</label>
+        <input type="text" class="col-sm-5 form-control" id="paidby" formControlName="paidby">
+
+        <div class="w-100"></div>
+        <span class="offset-sm-5 col-sm-7 formSubmitted" *ngIf="formSubmitted">You have successfully captured event. Go
+            to View Events for details!</span>
+        <button class="offset-sm-5 col-sm-2 form-control" type="submit" [disabled]="!eventForm.valid">Submit Events</button>
+        <button class="offset-sm-1 col-sm-2 form-control pull-right" type="button" (click)="goToViewEvents()">View Events</button>
+    </div>
+</form>

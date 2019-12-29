@@ -1,0 +1,9 @@
+.event-card {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.row > :first-child {
+    margin-left: 0;
+}

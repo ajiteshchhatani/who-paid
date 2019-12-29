@@ -1,0 +1,12 @@
+<div class="detail-container">
+    <h4 class="event-name">{{chosenEvent.eventName}}</h4>
+    <!-- <label>Event Name:</label><span>{{chosenEvent.eventName}}</span> -->
+    <div><label>Participants: </label><span>{{chosenEvent.participants}}</span></div>
+    <div><label>Cost: </label><span>{{chosenEvent.cost}}</span></div>
+    <div><label>Paid By: </label><span>{{chosenEvent.paidBy}}</span></div>
+    <div><label>Cost per head: </label><span>{{costPerHead}}</span></div>
+    <div class="owe-container">
+        <label>Who owes whom? </label><p *ngFor = "let people of participants.whoOwe">{{people}} owes {{costPerHead}} to {{participants.whoPaid}}</p>
+    </div>
+</div>
+

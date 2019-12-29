@@ -1,0 +1,29 @@
+.detail-container {
+    margin-top: 20px;
+    border: 1px solid #00000020;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;   
+}
+
+label{
+    font-weight: bold;
+}
+
+.detail-container h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail-container div {
+    padding: 0 20px;
+}
+
+.detail-container span {
+    padding: 0 5px;
+}
+
+.owe-container p {
+    display: inline-block;
+    padding: 0 5px;
+}
